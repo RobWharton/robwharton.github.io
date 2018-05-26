@@ -1,21 +1,25 @@
+<!DOCTYPE html> 
+
 <html>
   <head>
-    <title>Rob Wharton's Astronomical Cubemaps!</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
-
-
   <body>
-    <h1>M109 M108 M106 M104 M102 M101  Galaxy Cubemap</h1>
-    
-    <h2>
-        https://github.com/RobWharton/robwharton.github.io/blob/master/M109 M108 M106 M104 M102 M101.html
-    </h2>
+
+<a-scene>
+<a-assets>
+<a-cubemap id="sky">
+<img src="right.jpg">
+<img src="left.jpg">
+<img src="top.jpg">
+<img src="bottom.jpg">
+<img src="front.jpg">
+<img src="back.jpg">
+</a-cubemap>
+</a-assets>
+
+<a-entity geometry="primitive: box" material="envMap: #sky; roughness: 0"></a-entity>
+</a-scene>
 
   </body>
 </html>
-
-
-
-
-
-
